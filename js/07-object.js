@@ -20,26 +20,30 @@ const user2Age = user2[1];
 const user2Intro = `${user2Name} yra ${user2Age} metu amziaus.`;
 console.log(user2Intro);
 
-const emptyObject = {};
-console.log(emptyObject);
+console.clear();
+
+const object = {};
+console.log(object);
 
 const student1 = {
     name: 'Jonas',
     age: 99,
     isMarried: false,
     marks: []
-};
+}
+
 console.log(student1);
 
 const student2 = {
-    age: 69,
-    isMarried: true,
     name: 'Ona',
+    age: 66,
+    isMarried: true,
     marks: [10, 2, 8, 4, 6]
-};
+}
+
 console.log(student2);
 
-// STANDARTINIS REIKSMES ISTRAUKIMAS IS OBJEKTO -> obj['key']
+// STANDRATINIs REIKSMES ISTRAUKIMAS IS OBJEKTO -> obj['key']
 const stud1Name = student1['name'];
 const stud1Age = student1['age'];
 const stud1Marks = student1['marks'];
@@ -59,7 +63,6 @@ console.log(stud2Marks);
 console.log(stud2Status);
 
 // SUPAPRASTINTA OBJEKTO REIKSMES ISTRAUKIMO SINTAKSE -> obj.key
-
 const car = {
     brand: 'Tesla',
     model: 'S',
@@ -69,17 +72,19 @@ const car = {
 }
 
 console.log(car);
-console.log(car['brand']);
 console.log(car.brand);
-console.log(car['model']);
+console.log(car['brand']);
 console.log(car.model);
-console.log(car['price']);
+console.log(car['model']);
 console.log(car.price);
+console.log(car['price']);
+console.log(car.color);
+console.log(car['color']);
 
 const obj = {
     simple: 'paprasta reiksme',
-    'child-name': 'Johny boy',
-    childName: 'Johny boy'
+    'child-name': 'Jhony boy',
+    childName: 'Jhony boy'
 }
 
 console.log(obj.simple);
@@ -90,14 +95,15 @@ console.log(obj['child-name']);
 
 // console.log(obj.child - name);
 
-console.log('-------------');
+console.log('---------------');
+console.log('Apskaiciuojam pazymiu vidurki');
 
 const student3 = {
     name: 'Ona',
-    age: 69,
+    age: 66,
     isMarried: true,
     marks: [10, 2, 8, 4, 6]
-};
+}
 
 // const marks = student3.marks;
 
@@ -111,7 +117,7 @@ sum += student3.marks[4];
 const count = student3.marks.length;
 
 const average = sum / count;
-console.log('Mark average:', average);
+console.log('Marks average:', average);
 
 const person = {
     name: 'Petras',
@@ -119,11 +125,11 @@ const person = {
     children: [
         {
             name: 'Maryte',
-            age: 13
+            age: 13,
         },
         {
             name: 'Jonas',
-            age: 27
+            age: 27,
         },
         {
             name: 'Ona',
@@ -133,7 +139,5 @@ const person = {
 }
 
 console.log(person['children'][2]['name']);
-console.log(person.children[2]['name']);
-console.log(person['children'][2].name);
 console.log(person.children[2].name);
 console.log(person.children.length);

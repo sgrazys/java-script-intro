@@ -1,28 +1,32 @@
 console.clear()
 
-/*
-    In this first kata in the series, you need to define a Hero prototype to be used in a terminal game. The hero should have the following attributes:
-    attribute	value
-    name	user argument or 'Hero'
-    position	'00'
-    health	100
-    damage	5
-    experience	0
-*/
+let arr = [1, 2, 3]
 
-function Hero(name) {
-    return class Herojus {
-        constructor() {
-            this.name = name,
-                this.position = '00',
-                this.health = 100,
-                this.damage = 5,
-                this.experience = 0
-        }
 
-    }
+function getLength(arr) {
+    //return length of arr
+    return arr.length;
+}
+function getFirst(arr) {
+    //return the first element of arr
+    return arr[0];
+}
+function getLast(arr) {
+    //return the last element of arr
+    return arr[arr.length - 1];
+}
+function pushElement(arr) {
+    var el = 1;
+    //push el to arr
+
+    return arr.push(el);
+}
+function popElement(arr) {
+    //pop an element from arr
+
+    return arr.pop();
 }
 
-Hero('Tauras')
 
-
+console.log(pushElement(arr));
+console.log(arr);
