@@ -11,7 +11,7 @@ console.clear();
     }
 */
 
-function suma(a = 500, b = 13) {
+function suma(a, b) {
     return a + b;
 }
 
@@ -28,7 +28,6 @@ console.log(s12, s21);
 console.log(s13);
 console.log(s23);
 
-console.log('-----------------');
 
 const savikaina1 = 10;
 const savikaina2 = 20;
@@ -48,15 +47,18 @@ function salesPrice(cost) {
     return cost * taxCoof * marginCoof;
 }
 
+
 const price1 = salesPrice(savikaina1);
 const price2 = salesPrice(savikaina2);
 const price3 = salesPrice(savikaina3);
+
 
 console.log(savikaina1, '-->', price1);
 console.log(savikaina2, '-->', price2);
 console.log(savikaina3, '-->', price3);
 
-console.log('---------------');
+
+console.log('---------------------');
 
 const student1 = [10, 2, 8, 4, 6];
 const student2 = [6, 7, 8, 9, 10];
@@ -76,9 +78,9 @@ function listAverage(marks) {
     return sum / count;
 }
 
-const average1 = listAverage(student1); // 6
-const average2 = listAverage(student2); // 8
-const average3 = listAverage(student3); // 5
+const average1 = listAverage(student1); //6
+const average2 = listAverage(student2); //8
+const average3 = listAverage(student3); //5
 
 console.log(average1);
 console.log(average2);
