@@ -11,12 +11,11 @@ class Student {
         this.#isMarried = false;
         this.#shoes = 40;
         this.#marks = [];
-    }
+    };
 
-    getName() {
-        return this.#name;
+    getName(name) {
+        return this.#name
     }
-
     isValidMark(mark) {
         if (typeof mark !== 'number'
             || !isFinite(mark)
@@ -25,16 +24,16 @@ class Student {
             || mark % 1 !== 0) {
             return false;
         }
-        return true;
+        return true
     }
 
-    // Metodas, itraukiant nauja pazymi
+    //Metodas itraukiantis nauja pazymi
     addMark(mark) {
         if (!this.isValidMark(mark)) {
             return 'ERROR';
         }
 
-        this.#marks.push(mark);
+        this.#marks.push(mark)
 
         return 'OK';
     }
@@ -44,46 +43,50 @@ class Student {
             if (!this.isValidMark(mark)) {
                 continue;
             }
-            this.#marks.push(mark);
+            this.#marks.push(mark)
         }
     }
 
+
     marksAverage() {
         if (this.#marks.length === 0) {
-            return 'neiskaita';
+            return 'neiskaita'
         }
 
         return this.#marks.reduce((t, m) => t + m, 0) / this.#marks.length;
     }
 
     marksAverage1() {
+
         const correctMarks = this.marks
             .filter(this.isValidMark);
 
         if (correctMarks.length === 0) {
-            return 'neiskaita';
+            return 'neiskaita'
         }
 
         return correctMarks.reduce((t, m) => t + m, 0) / correctMarks.length;
     }
 
     marksAverage2() {
+
         let sum = 0;
-        let correct = 0;
+        let correct = 0
 
         for (const mark of this.marks) {
             if (this.isValidMark(mark)) {
-                sum += mark;
-                correct++;
+                sum += mark
+                correct++
+
             }
         }
 
         if (correct === 0) {
-            return 'neiskaita';
+            return 'neiskaita'
         }
 
-        return sum / correct;
+        return sum / correct
     }
 }
 
-export { Student };
+export { Student }
