@@ -2,51 +2,35 @@ class Shop {
     constructor(name, currency) {
         this.name = name;
         this.currency = currency;
-        this.products = [];
+        this.product = [];
+
     }
 
     intro() {
-        const res = `Hi, we are "${this.name}".\nUse .items() method to get list of items to purchase.\nUse .order() method to get your order details.`;
-
-        console.log(res);
-        return res;
+        console.log(`Hi, we are ${this.name}.\nUse .items() method to get list of items to purchase.\nUse .order() method to get your order details.`);
     }
 
-    formattedPrice(price) {
-        return `${(price / 100).toFixed(2)} ${this.currency}`;
+    formatedProductName(product) {
+        return product[0].toUpperCase() + product.slice(1);
     }
 
-    formattedName(name) {
-        return name[0].toUpperCase() + name.slice(1);
+    formatedPrice(price) {
+        return (price / 100).toFixed(2);
     }
 
     addItem(product, price) {
-        this.products.push({
+        price = this.formatedPrice(price)
+        console.log(`${this.name} sells ${product} for ${price} ${this.currency}`);
+
+        product = this.formatedProductName(product)
+
+        this.product.push({
             name: product,
-            price: price,
-        });
+            price: price
+        })
 
-        const res = `"${this.name}" sells ${product} for ${this.formattedPrice(price)} now!`;
-
-        console.log(res);
-        return res;
     }
 
-    items() {
-        const title = `Items for sale at "${this.name}":`;
-        const line = `====================`;
-        let list = '';
-        let i = 0;
-
-        for (const { name, price } of this.products) {
-            list += `${++i}) ${this.formattedName(name)} - ${this.formattedPrice(price)};\n`;
-        }
-
-        const res = `${title}\n${line}\n${list}${line}`;
-
-        console.log(res);
-        return res;
-    }
 }
 
 export { Shop }
