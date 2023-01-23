@@ -3,7 +3,7 @@ class Shop {
         this.name = name;
         this.currency = currency;
         this.products = [];
-        this.users = [];
+        this.shoppingCarts = [];
 
     }
 
@@ -59,13 +59,16 @@ class Shop {
     }
 
     createCart(userName) {
-        // pridedu vartotoja i Class prie users masyvo
-        this.users.push({
-            name: userName,
-        });
+        const newCart = {
+            owner: userName,
+            items: [],
+        }
+
+        this.shoppingCarts.push(newCart)
 
         console.log(`${userName} have an open cart at "${this.name}"!`);
     }
+
 
 }
 

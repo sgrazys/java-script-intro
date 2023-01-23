@@ -43,9 +43,10 @@ onlineKioskas.updatePrice('bulves', 90);
 onlineKioskas.createCart('Augustas');
 // Augustas have an open cart at "Meskiuko kioskas"!
 
-
 onlineKioskas.createCart('Barbora');
 // Barbora have an open cart at "Meskiuko kioskas"!
+
+console.log(onlineKioskas.shoppingCarts);
 
 // onlineKioskas.addItemToCart('Augustas', 2, 1);
 // onlineKioskas.addItemToCart('Augustas', 4, 2);
