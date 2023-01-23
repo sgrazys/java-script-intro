@@ -1,32 +1,23 @@
 console.clear()
 
-let arr = [1, 2, 3]
+/*
+Return the number (count) of vowels in the given string.
 
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
 
-function getLength(arr) {
-    //return length of arr
-    return arr.length;
-}
-function getFirst(arr) {
-    //return the first element of arr
-    return arr[0];
-}
-function getLast(arr) {
-    //return the last element of arr
-    return arr[arr.length - 1];
-}
-function pushElement(arr) {
-    var el = 1;
-    //push el to arr
+The input string will only consist of lower case letters and/or spaces.
+*/
 
-    return arr.push(el);
-}
-function popElement(arr) {
-    //pop an element from arr
+function monkeyCount(n) {
 
-    return arr.pop();
+    let monkeys = []
+    for (let i = 1; i <= n; i++) {
+        monkeys.push(i);
+    }
+
+    return monkeys;
 }
 
 
-console.log(pushElement(arr));
-console.log(arr);
+
+console.log(monkeyCount(9));
