@@ -59,7 +59,7 @@ class Shop {
     }
 
     createCart(userName) {
-        // pridedu avrtotoja i Class prie users masyvo
+        // pridedu vartotoja i Class prie users masyvo
         this.users.push({
             name: userName,
         });
