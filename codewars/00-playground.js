@@ -8,16 +8,13 @@ We will consider a, e, i, o, u as vowels for this Kata (but not y).
 The input string will only consist of lower case letters and/or spaces.
 */
 
-function monkeyCount(n) {
-
-    let monkeys = []
-    for (let i = 1; i <= n; i++) {
-        monkeys.push(i);
+function feast(beast, dish) {
+    if (beast[0] === dish[0] && beast.at(- 1) === dish.at(- 1)) {
+        return true;
+    } else {
+        return false;
     }
-
-    return monkeys;
 }
 
 
-
-console.log(monkeyCount(9));
+console.log(feast("great blue heron", "garlic naaz"));
